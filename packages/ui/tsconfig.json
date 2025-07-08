@@ -4,9 +4,10 @@
     //"outDir": "dist"
     "baseUrl": ".",
     "paths": {
+      "@/*": ["./*"],
       "@ui/*": ["./src/*"],
       "@ui/components/ui*": ["./src/components/ui/*"],
-      "@lib/utils": ["./lib/utils.ts"],
+      "@/lib/utils": ["./lib/utils.ts"],
     }
   },
   "include": ["."],
