@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@repo/typescript-config/base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@repo/database": ["./packages/database/src/index.ts"],
+      "@repo/database/*": ["./packages/database/src/*"],
+      "@repo/ui": ["./packages/ui/src/index.ts"],
+      "@repo/ui/*": ["./packages/ui/src/*"],
+      "@lib/*": ["./packages/ui/lib/*"],
+      "@repo/eslint-config/*": ["./packages/eslint-config/*"],
+      "@repo/typescript-config/*": ["./packages/typescript-config/*"]
+    }
+  },
+  "include": [],
+  "exclude": ["node_modules", "dist", ".turbo"],
+  "references": [
+    { "path": "./apps/api" },
+    { "path": "./apps/web" },
+    { "path": "./apps/docs" },
+    { "path": "./packages/database" },
+    { "path": "./packages/ui" },
+    { "path": "./packages/eslint-config" },
+    { "path": "./packages/typescript-config" }
+  ]
+}
